@@ -1,6 +1,6 @@
 import pytest
-from django.urls import reverse
 from bs4 import BeautifulSoup
+from django.urls import reverse
 
 
 @pytest.mark.django_db

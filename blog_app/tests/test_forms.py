@@ -1,6 +1,7 @@
 import pytest
+
 from blog_app.forms import PostForm, PostModelForm
-from blog_app.models import Post, Author, Tag
+from blog_app.models import Tag
 
 
 @pytest.mark.django_db
@@ -58,5 +59,3 @@ def test_post_modelform_validation_negative_title(author_1):
     }
     form = PostModelForm(data=form_data)
     assert not form.is_valid()
-
-

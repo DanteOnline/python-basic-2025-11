@@ -1,4 +1,5 @@
 import pytest
+
 from blog_app.models import Author, Post
 
 

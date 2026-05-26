@@ -1,6 +1,7 @@
 from django import forms
-from blog_app.models import Post
 from django.core.exceptions import ValidationError
+
+from blog_app.models import Post
 
 
 class PostForm(forms.Form):

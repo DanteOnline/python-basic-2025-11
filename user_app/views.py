@@ -1,9 +1,9 @@
-from django.urls import reverse_lazy
-from django.views.generic import FormView, RedirectView
+from django.contrib.auth import login
 from django.contrib.auth.views import LoginView, LogoutView
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth import login, logout
-from .forms import CustomUserCreationForm, CustomAuthenticationForm
+from django.urls import reverse_lazy
+from django.views.generic import FormView
+
+from .forms import CustomAuthenticationForm, CustomUserCreationForm
 
 
 class RegisterView(FormView):
@@ -28,4 +28,7 @@ class CustomLoginView(LoginView):
 
 
 class CustomLogoutView(LogoutView):
+    """
+    Logout view
+    """
     next_page = reverse_lazy('login')

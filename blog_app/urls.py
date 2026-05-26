@@ -1,6 +1,14 @@
 from django.urls import path
-from blog_app.views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, AboutTemplateView, IndexTemplateView
 
+from blog_app.views import (
+    AboutTemplateView,
+    IndexTemplateView,
+    PostCreateView,
+    PostDeleteView,
+    PostDetailView,
+    PostListView,
+    PostUpdateView,
+)
 
 urlpatterns = [
     path('', IndexTemplateView.as_view(), name='index'),

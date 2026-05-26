@@ -1,9 +1,16 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
-from django.urls import reverse_lazy
 from django.contrib import messages
-from blog_app.models import Post, Author
-from blog_app.forms import PostForm, PostModelForm
+from django.urls import reverse_lazy
+from django.views.generic import (
+    CreateView,
+    DeleteView,
+    DetailView,
+    ListView,
+    TemplateView,
+    UpdateView,
+)
+
+from blog_app.forms import PostModelForm
+from blog_app.models import Post
 
 
 class IndexTemplateView(TemplateView):
